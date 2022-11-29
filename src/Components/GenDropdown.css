@@ -1,0 +1,43 @@
+.genDropdown {
+  z-index: 1002;
+  margin: 0 auto 1.5rem auto;
+  width: 200px;
+  position: relative;
+}
+
+.genDropdown p {
+  padding: 1rem;
+  background-color: orange;
+  color: #333;
+}
+
+.generations {
+  position: absolute;
+  top: 2.5rem;
+  background-color: #333;
+  width: 100%;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.generations ul li {
+  border-bottom: 1px solid #999;
+  list-style-type: none;
+  transition: all 0.3s ease;
+}
+
+.generations ul li a {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.generations ul li:hover {
+  background-color: #666;
+}
+
+/*** On hover */
+.genDropdown:hover .generations {
+  display: block;
+}

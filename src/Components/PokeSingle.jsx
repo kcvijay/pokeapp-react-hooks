@@ -1,8 +1,9 @@
-// FIX:        Fix the problem while mapping the data for moves and types
-
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+
+import Loader from "../Assets/loader.gif";
+
 import classes from "./PokeSingle.module.css";
 
 const PokeSingle = () => {
@@ -22,13 +23,18 @@ const PokeSingle = () => {
   }, []);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="loader">
+        <img src={Loader} alt="loader"></img>
+      </div>
+    );
   }
   return (
     <div className={classes.pokeSingleWrapper}>
       <h3 className={classes.pokesingle_header}>{data.name}</h3>
       <div className={classes.pokesingle_details}>
         <img src={data.sprites?.other.home.front_default} alt={data.name}></img>
+
         <table className={classes.pokesingle_table}>
           <thead>
             <tr>
@@ -39,37 +45,19 @@ const PokeSingle = () => {
           <tbody>
             <tr>
               <td>Height</td>
-              <td>{data.height / 10} Meter</td>
+              <td>{data.height / 10} m</td>
             </tr>
-
             <tr>
               <td>Weight</td>
               <td>{data.weight / 10} Kg</td>
             </tr>
-
-            <tr>
-              <td>Types</td>
-              <td>
-                {data.types
-                  .map((type) => {
-                    return type.type.name;
-                  })
-                  .join(", ")}
-              </td>
-            </tr>
-
-            <tr>
-              <td>Moves</td>
-              <td>{data.moves.length}</td>
-            </tr>
           </tbody>
         </table>
       </div>
-      <div className={classes.goBackWrapper}>
-        <button className="go-back" onClick={() => navigate(-1)}>
-          Go back
-        </button>
-      </div>
+
+      <button className={classes.goBack} onClick={() => navigate(-1)}>
+        &larr;&nbsp;Go back
+      </button>
     </div>
   );
 };

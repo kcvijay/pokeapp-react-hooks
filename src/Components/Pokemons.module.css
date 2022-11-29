@@ -4,9 +4,17 @@ h1 {
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
 }
 
+.pokemons {
+  text-align: center;
+}
+
 .cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.loader {
+  margin: 0 auto;
 }

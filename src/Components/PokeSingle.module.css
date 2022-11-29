@@ -43,3 +43,15 @@
 .pokesingle_table tbody tr:nth-child(odd) {
   background-color: #f8cfab;
 }
+
+.goBack {
+  display: inline-flex;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  background-color: rgb(240, 105, 16);
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}

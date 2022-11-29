@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import classes from "./Pokemons.module.css";
+import axios from "axios";
 
 import Card from "./Card";
-import axios from "axios";
+import GenDropdown from "./GenDropdown";
+import Loader from "../Assets/loader.gif";
+
+import classes from "./Pokemons.module.css";
 
 const PokeList = () => {
   const [data, setData] = useState([]);
@@ -24,9 +27,18 @@ const PokeList = () => {
       });
   }, []);
 
+  if (isLoading) {
+    return (
+      <div className="loader">
+        <img src={Loader} alt="loader"></img>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className={classes.pokemons}>
       <h1>Pokemons</h1>
+      <GenDropdown />
       <div className={classes.cards}>
         {data.map((card) => {
           return (
