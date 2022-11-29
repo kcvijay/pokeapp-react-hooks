@@ -1,0 +1,27 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home-header {
+  font-size: 3rem;
+}
+
+.pikachu-img {
+  width: 300px;
+}
+
+.home-page p {
+  font-size: 2rem;
+}
+
+#to-pokemons {
+  display: inline-flex;
+  padding: 1rem 1.5rem;
+  background-color: rgb(240, 105, 16);
+  color: #fff;
+  text-decoration: none;
+  margin: 1rem 0;
+}

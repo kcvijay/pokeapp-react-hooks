@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+  padding: 1.5rem 0;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

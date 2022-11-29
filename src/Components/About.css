@@ -1,0 +1,12 @@
+.about {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.about h1 {
+  margin: 1rem 0;
+}
+
+.about p:last-child {
+  font-weight: 700;
+}

@@ -1,0 +1,39 @@
+.pokesingle_header {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #4e4e4e;
+}
+
+.pokesingle_details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 1rem;
+}
+
+.pokesingle_details img {
+  background-color: #fff3e8;
+}
+
+.pokesingle_table,
+.pokesingle_details img {
+  width: 280px;
+}
+
+.pokesingle_table thead {
+  background-color: #ff7700;
+  color: #fff;
+}
+.pokesingle_table td,
+.pokesingle_table th {
+  padding: 1rem;
+  width: 10px;
+  text-transform: capitalize;
+}
+.pokesingle_table tbody tr:nth-child(even) {
+  background-color: #f9c08e;
+}
+.pokesingle_table tbody tr:nth-child(odd) {
+  background-color: #f8cfab;
+}

@@ -1,0 +1,21 @@
+nav ul li {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  padding: 2rem;
+  width: 150px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #969696;
+}
+
+nav ul li a.active {
+  background: #4d4d4d;
+}
