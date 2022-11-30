@@ -51,6 +51,20 @@ const PokeSingle = () => {
               <td>Weight</td>
               <td>{data.weight / 10} Kg</td>
             </tr>
+            <tr>
+              <td>Types</td>
+              <td>
+                {data.types
+                  ?.map((type) => {
+                    return type.type.name;
+                  })
+                  .join(", ")}
+              </td>
+            </tr>
+            <tr>
+              <td>Moves</td>
+              <td>{data.moves?.length}</td>
+            </tr>
           </tbody>
         </table>
       </div>
