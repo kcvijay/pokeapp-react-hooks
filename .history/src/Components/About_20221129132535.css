@@ -1,7 +1,6 @@
 .about {
-  max-width: 600px;
+  text-align: center;
   line-height: 1.5;
-  margin: 0 auto;
 }
 
 .about h1 {

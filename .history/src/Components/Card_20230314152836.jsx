@@ -6,8 +6,8 @@ const Card = ({ id, image, name }) => {
   return (
     <div className="card">
       <p className="poke-id">{id}</p>
-      <div>
-        <img className="poke-img" src={image} alt={name}></img>
+      <div className="poke-img">
+        <img src={image} alt={name}></img>
       </div>
       <h2 className="pokemon-name">
         {name}

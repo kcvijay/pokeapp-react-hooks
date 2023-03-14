@@ -1,6 +1,7 @@
 .card {
   position: relative;
-  width: 300px;
+  max-width: 300px;
+  max-height: 500px;
   margin: 1rem;
   border: 2px solid #f1f1f1;
   border-radius: 5px;
@@ -9,13 +10,8 @@
 }
 
 .poke-img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
   padding: 1rem;
-}
-
-.poke-img img {
-  object-fit: cover;
 }
 
 .poke-id {

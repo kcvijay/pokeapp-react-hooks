@@ -33,7 +33,7 @@ const PokeList = () => {
     setIsLoading(true);
     axios
       .get(
-        `https://pokeapi.co/api/v2/pokemon?limit=${Generations[index]?.limit}&offset=${Generations[index]?.offset}`
+        `https://pokeapi.co/api/v2/pokemon?limit=${Generations[index].limit}&offset=${Generations[index].offset}`
       )
       .then((response) => {
         const fetches = response.data.results.map((poke) => {
@@ -43,7 +43,7 @@ const PokeList = () => {
         Promise.all(fetches).then((response) => {
           setData(response);
           setIsLoading(false);
-          setGenId(+index + 1);
+          setGenId(Generations[index]);
         });
       });
   };

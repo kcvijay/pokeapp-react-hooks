@@ -29,11 +29,13 @@ const PokeList = () => {
       });
   }, []);
 
-  const generationPokemonsHandler = (index) => {
+  const generationPokemonsHandler = (e, index) => {
     setIsLoading(true);
     axios
       .get(
-        `https://pokeapi.co/api/v2/pokemon?limit=${Generations[index]?.limit}&offset=${Generations[index]?.offset}`
+        `https://pokeapi.co/api/v2/pokemon?limit=${Generations[
+          index
+        ].limit.toString()}&offset=${Generations[index].offset.toString()}`
       )
       .then((response) => {
         const fetches = response.data.results.map((poke) => {
@@ -43,7 +45,6 @@ const PokeList = () => {
         Promise.all(fetches).then((response) => {
           setData(response);
           setIsLoading(false);
-          setGenId(+index + 1);
         });
       });
   };

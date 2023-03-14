@@ -6,8 +6,8 @@ const About = () => {
     <div className="about">
       <h1>Pokemon App created in React</h1>
       <p>
-        This is a project where users can browse all kinds of Pokemons and their
-        specifications.
+        This is a classroom project for Fullstack Web Developer Program at BCH
+        Helsinki, 2022.
       </p>
       <p>
         The project gets data from{" "}
@@ -21,7 +21,6 @@ const About = () => {
         more details about that Pokemon.
       </p>
       <p>
-        View&nbsp;
         <a
           href="https://www.github.com/pokeapp-react-hooks"
           target="_blank noreferer"

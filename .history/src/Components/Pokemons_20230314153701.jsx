@@ -43,7 +43,6 @@ const PokeList = () => {
         Promise.all(fetches).then((response) => {
           setData(response);
           setIsLoading(false);
-          setGenId(+index + 1);
         });
       });
   };

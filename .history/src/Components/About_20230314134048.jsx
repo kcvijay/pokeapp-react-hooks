@@ -6,8 +6,8 @@ const About = () => {
     <div className="about">
       <h1>Pokemon App created in React</h1>
       <p>
-        This is a project where users can browse all kinds of Pokemons and their
-        specifications.
+        This is a project where users can browser all kinds of Pokemons and
+        their specifications.
       </p>
       <p>
         The project gets data from{" "}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import { Generations } from "../Generations";
+import { Generations } from "./Generations";
 import Card from "./Card";
 import GenDropdown from "./GenDropdown";
 import Loader from "../Assets/loader.gif";
@@ -11,7 +11,6 @@ import classes from "./Pokemons.module.css";
 const PokeList = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [genId, setGenId] = useState(1);
 
   useEffect(() => {
     setIsLoading(true);
@@ -29,25 +28,6 @@ const PokeList = () => {
       });
   }, []);
 
-  const generationPokemonsHandler = (index) => {
-    setIsLoading(true);
-    axios
-      .get(
-        `https://pokeapi.co/api/v2/pokemon?limit=${Generations[index]?.limit}&offset=${Generations[index]?.offset}`
-      )
-      .then((response) => {
-        const fetches = response.data.results.map((poke) => {
-          return axios.get(poke.url).then((res) => res.data);
-        });
-
-        Promise.all(fetches).then((response) => {
-          setData(response);
-          setIsLoading(false);
-          setGenId(+index + 1);
-        });
-      });
-  };
-
   if (isLoading) {
     return (
       <div className="loader">
@@ -58,8 +38,8 @@ const PokeList = () => {
 
   return (
     <div className={classes.pokemons}>
-      <h1>Pokemons Generation {genId}</h1>
-      <GenDropdown getGenPokemon={(i) => generationPokemonsHandler(i)} />
+      <h1>Pokemons</h1>
+      <GenDropdown />
       <div className={classes.cards}>
         {data.map((card) => {
           return (
